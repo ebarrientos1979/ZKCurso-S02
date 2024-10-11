@@ -10,8 +10,18 @@
   <properties>
   		<maven.compiler.source>1.8</maven.compiler.source>
   		<maven.compiler.target>1.8</maven.compiler.target>  
+  		<zk.version>9.6.0.2</zk.version>
   </properties>
-  
+  <repositories>
+  		<repository>
+  			<id>ZK CE</id>
+  			<name>ZK CE Repository</name>
+  			<url>https://mavensync.zkoss.org/maven2</url>
+  			<snapshots>
+  				<enabled>true</enabled>
+  			</snapshots>
+  		</repository>  
+  </repositories>
   <dependencies>
   		<dependency>
   			<groupId>javax.servlet</groupId>
@@ -20,6 +30,29 @@
   			<scope>provided</scope>
   		</dependency>
   		
+  		<dependency>
+  			<groupId>org.zkoss.zk</groupId>
+  			<artifactId>zk</artifactId>
+  			<version>${zk.version}</version>  		
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>org.zkoss.zk</groupId>
+  			<artifactId>zul</artifactId>
+  			<version>${zk.version}</version>  		
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>org.zkoss.zk</groupId>
+  			<artifactId>zhtml</artifactId>
+  			<version>${zk.version}</version>  		
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>org.zkoss.zk</groupId>
+  			<artifactId>zkplus</artifactId>
+  			<version>${zk.version}</version>  		
+  		</dependency>  		
   </dependencies>
   
   <build>
